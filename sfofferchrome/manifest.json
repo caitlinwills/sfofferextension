@@ -6,10 +6,8 @@
 	"version": "1.0",
 	"author": "@cwills",
 	"icons": {
-		"128": "icon128.png",
-		"48": "icon48.png",
-		"16": "icon16.png",
-	}
+		"128": "logo.png"
+	},
 
 	"background": {
 		"scripts": ["popup.js"],
@@ -24,5 +22,11 @@
 	"browser_action": {
 		"default_icon": "logo.png",
 		"default_popup": "popup.html"
-	}
+	},
+	"content_scripts": [ 
+        { 
+            "js": [ "jquery.min.js", "background.js" ],
+             "matches": [ "http://*/*", "https://*/*"]
+         }
+     ] 
 }
