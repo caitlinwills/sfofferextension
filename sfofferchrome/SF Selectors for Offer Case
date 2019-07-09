@@ -1,9 +1,25 @@
  Notes for browser ext
  Account: $("table.detailList th:contains('Account')").siblings("td").first().text()
+ 
  Offer Name: $(“table.detailList th:contains('Offer Name')").siblings("td").first().text()
+
 Network Link ID: $("table.detailList th:contains('Network Link ID')").siblings("td").first().text()
+
 Online Code: $("table.detailList th:contains('Online Code')").siblings("td").first().text()
+
 Tcs&Cs: $("table.detailList th:contains('Terms & Conditions')").siblings("td").first().text()
+
 Start Date: $("table.detailList th:contains('Start Date')").text()
 
+End date: $("table.detailList th:contains('End Date')").next().text()
 
+CQMS Selectors
+
+Store: $("label:contains('* Store:')").parent().find('input')
+
+Title: $("label:contains('* Title:')").parent().find('input')
+
+Description: 
+        var desc = $('[data-qa=description]').find('.text-area')
+        desc.find('.wsm-mimic-textarea').trigger('click')
+        desc.find('textarea')
