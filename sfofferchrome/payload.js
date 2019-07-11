@@ -1,11 +1,5 @@
 // send the page title as a chrome message
 
-var s = document.createElement("script");
-s.src="https://code.jquery.com/jquery-3.4.1.js";
-s.onload = function(e){ /* now that its loaded, do something */ }; 
-document.head.appendChild(s); 
-$(document).ready(function(){
-
 //SF Account:
 var account = $("table.detailList th:contains('Account')").siblings("td").first().text()
 var message = {"account":account};
@@ -41,4 +35,3 @@ var message = {"account":account};
 
 
 chrome.runtime.sendMessage(document.title);
-});
