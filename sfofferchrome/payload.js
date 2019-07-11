@@ -1,8 +1,7 @@
 // send the page title as a chrome message
 
 //SF Account:
-var account = $("#summary-val").text()
-//var account = $("table.detailList th:contains('Account')").siblings("td").first().text()
+var account = $("table.detailList th:contains('Account')").siblings("td").first().text()
 var message = {"account":account};
 
 
